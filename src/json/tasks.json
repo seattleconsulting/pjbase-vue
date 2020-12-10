@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "text": "Design the solution"
+    },
+    {
+        "id": 2,
+        "text": "Prepare for implementation"
+    },
+    {
+        "id": 3,
+        "text": "Prepare the test/QA environment"
+    },
+    {
+        "id": 4,
+        "text": "Install the environment requirement"
+    },
+    {
+        "id": 5,
+        "text": "Implement distributed data feeds"
+    },
+    {
+        "id": 6,
+        "text": "Implement a business system in the test/QA environment"
+    },
+    {
+        "id": 7,
+        "text": "Schedule Jobs"
+    },
+    {
+        "id": 8,
+        "text": "Prepare the production environment"
+    },
+    {
+        "id": 9,
+        "text": "Install the product in production environment"
+    },
+    {
+        "id": 10,
+        "text": "Implement the production environment"
+    }
+]
