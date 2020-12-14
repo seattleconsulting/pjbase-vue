@@ -39,6 +39,29 @@ if eslint-config-standard > ^14.1.1 , npm i eslint-config-standard@14.1.1 eslint
 
 ## Usage
 ```.eslintrc.js
+module.exports = {
+	root: true,
+	env: {
+		browser: true,
+		node: 1
+	},
+	extends: [
+		'plugin:vue/essential',
+		'standard'
+	],
+	plugins: [
+		'vue'
+	],
+	rules: {
+		'indent': 'off',
+		'no-tabs': 0,
+		'generator-star-spacing': 'off',
+		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'space-before-function-paren': ["error", "never"],
+		'comma-dangle': ["error", "never"],
+		'no-trailing-spaces': ["error", { "ignoreComments": true }]
+	}
+}
 ```
 
 ## Installation
@@ -48,3 +71,10 @@ Search ESLint
 Install ESLint
 Restart VS Code
 ```
+# Docker
+
+## Installation
+
+[Dockerインストール](https://www.docker.com/get-started)
+
+[Dockerize Vue.js App](https://vuejs.org/v2/cookbook/dockerize-vuejs-app.html)
