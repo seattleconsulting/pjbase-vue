@@ -9,7 +9,6 @@
 ### アプリのルートディレクトリに Dockerfile.dev を作成します。
 
 ```
-	Dockerfile.env
 FROM node:10.17.0-alpine3.9
 
 # make the 'app' folder the current working directory
