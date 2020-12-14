@@ -6,7 +6,7 @@
 [Dockerインストール](https://www.docker.com/get-started)
 
 # Dockerfile.dev の作成
-# アプリのルートディレクトリに Dockerfile.dev を作成します。
+### アプリのルートディレクトリに Dockerfile.dev を作成します。
 
 ```
 	Dockerfile.env
