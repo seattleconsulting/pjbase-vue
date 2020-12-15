@@ -1,32 +1,6 @@
 <template>
 	<div class="app">
-		<div class="row" v-if="register">
-			<h3 class="row">タクス登録</h3>
-			<div class="col-md-6">
-				<div class="form-group">
-					<label>Task :</label>
-					<input type="text" class="text" v-model="registerText">
-					<p class="error-txt" id="error-register">タスクを入力して下さい。</p>
-				</div>
-				<div class="btn-submit">
-					<button type="submit" class="btn btn-primary" @click="registerTask()">登録</button>
-				</div>
-			</div>
-		</div>
-		<div class="row" v-if="update">
-			<h3 class="row">タクス編集</h3>
-			<div class="col-md-6">
-				<div class="form-group">
-					<label>Task :</label>
-					<input type="text" class="text" v-model="edtiText">
-					<p class="error-txt" id="error-edit">タスクを入力して下さい。</p>
-				</div>
-				<div class="btn-submit">
-					<button type="submit" class="btn btn-primary" @click="editTask()">編集</button>
-				</div>
-			</div>
-		</div>
-		<div class="row" v-if="taskList">
+		<div class="row">
 			<h3 class="row">タクス一覧</h3>
 			<table>
 				<thead>
@@ -37,12 +11,12 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr v-for="task in list" :key="task.id">
+					<tr v-for="task in tasks" :key="task.id">
 						<td>{{ task.id }}</td>
-						<td>{{ task.text }}</td>
+						<td>{{ task.task_name }}</td>
 						<div class="btn-group" role="group">
-							<button class="btn btn-success" @click="edit(task.id)">編集</button>
-							<button class="btn btn-danger" @click="remove(task.id)">削除</button>
+							<button class="btn btn-success" @click="editbtn(task.id)">編集</button>
+							<button class="btn btn-danger" @click="removebtn(task.id)">削除</button>
 						</div>
 					</tr>
 				</tbody>
@@ -62,5 +36,5 @@
 		</div>
 	</div>
 </template>
-<script src="../service/task.js">
+<script src="../service/tasks/task.js">
 </script>
