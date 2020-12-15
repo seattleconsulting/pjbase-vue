@@ -7,26 +7,26 @@
 }
 
 .row {
-    text-align: left;
+  text-align: left;
 }
 
 .text {
-    width: 300px;
-    margin-left: 20px;
-    padding: 5px;    
+  width: 300px;
+  margin-left: 20px;
+  padding: 5px;    
 }
 
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 td,
 th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
 tr {
@@ -34,28 +34,35 @@ tr {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }
 
 .btn-group {
-    text-align: center;
-    padding: 5px;
+  text-align: center;
+  padding: 5px;
 }
 
 .btn-submit {
-    float: left;
-    margin: 20px 0;
+	width: 250px;
+  margin: 20px 0;
 }
 
-.btn-submit button {
-    width: 100px;
-    padding: 5px;
+.btn-submit .btn-back,.btn-submit .btn-primary {
+	width: 100px;
+	float: left;
+	padding: 5px;		
+}
+
+.btn-submit .btn-register, .btn-submit .btn-edit {
+	float: right;
+	width: 100px;
+	padding: 5px;		
 }
 
 .error-txt {
-    display: none;
-    font-size: 10px;
-    color: red;
+  display: none;
+  font-size: 10px;
+  color: red;
 }
 
 .confirm-popup {

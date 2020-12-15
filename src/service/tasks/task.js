@@ -27,13 +27,16 @@ export default {
 
 		// 登録ボタンをクリック時
 		add() {
+			this.$store.commit('task/createSuccess', null)
 			this.$router.push('/create')
 		},
 		// 編集ボタンクリック時
 		editbtn(id) {
+			this.$store.commit('task/editSuccess', null)
 			this.$router.push('/edit/' + id)
 		},
 		removebtn(id) {
+			this.$store.commit('task/removeSuccess', null)
 			this.removeId = id
 			$('.confirm-popup').show()
 		},

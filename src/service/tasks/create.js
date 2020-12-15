@@ -24,6 +24,9 @@ export default {
 	},
 	methods: {
 		...mapActions('task', ['create']),
+		backBtn() {
+			this.$router.push('/')
+		},
 		// タスク登録
 		registerTask() {
 			if (this.registerText) {

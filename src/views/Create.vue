@@ -9,7 +9,8 @@
 					<p class="error-txt" id="error-register">タスクを入力して下さい。</p>
 				</div>
 				<div class="btn-submit">
-					<button type="submit" class="btn btn-primary" @click="registerTask()">登録</button>
+					<button type="submit" class="btn btn-back" @click="backBtn()">戻る</button>
+					<button type="submit" class="btn btn-register" @click="registerTask()">登録</button>
 				</div>
 			</div>
 		</div>

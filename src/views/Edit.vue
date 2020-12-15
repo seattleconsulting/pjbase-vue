@@ -9,7 +9,8 @@
 					<p class="error-txt" id="error-edit">タスクを入力して下さい。</p>
 				</div>
 				<div class="btn-submit">
-					<button type="submit" class="btn btn-primary" @click="editTask()">編集</button>
+					<button type="submit" class="btn btn-back" @click="backBtn()">戻る</button>
+					<button type="submit" class="btn btn-edit" @click="editTask()">編集</button>
 				</div>
 			</div>
 		</div>

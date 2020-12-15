@@ -36,6 +36,9 @@ export default {
 	},
 	methods: {
 		...mapActions('task', ['getTaskById', 'edit']),
+		backBtn() {
+			this.$router.push('/')
+		},
 		// タスク編集
 		editTask() {
 			if (this.editText) {
