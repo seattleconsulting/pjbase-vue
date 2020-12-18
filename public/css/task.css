@@ -111,3 +111,32 @@ tr:nth-child(even) {
 .cancel, .ok {
 	text-decoration: underline;
 }
+
+.reg-txt {
+	width: 150px;
+  float: left;
+}
+
+.form-group {
+	padding: 10px;
+}
+
+.form-btn-group {
+	margin: 20px 10px 10px 10px;
+}
+
+.btn-login, .btn-input {
+	padding: 5px 10px;
+}
+
+.text-link {
+	color: #5d5d99;
+  text-decoration: underline;
+}
+
+.err-txt {
+  display: none;
+  font-size: 10px;
+	color: red;
+	margin-left: 170px;
+}

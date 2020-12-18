@@ -22,7 +22,7 @@ export default {
 		},
 		editRes: function(res) {
 			if (res) {
-				this.$router.push('/')
+				this.$router.push('/task')
 			}
 		},
 		task: function(res) {
@@ -37,7 +37,7 @@ export default {
 	methods: {
 		...mapActions('task', ['getTaskById', 'edit']),
 		backBtn() {
-			this.$router.push('/')
+			this.$router.push('/task')
 		},
 		// タスク編集
 		editTask() {

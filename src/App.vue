@@ -5,9 +5,16 @@
 			<router-link to="/about">About</router-link> | -->
 			<router-link to="/task">Vue CRUD</router-link>
 		</div>
+		<div id="menu" v-if="showMenu()">
+			<label class="menu-txt-name">{{name}}</label>
+			<label class="menu-txt-logout" @click="logout()">ログアウト</label>
+		</div>
 		<router-view />
 	</div>
 </template>
+
+<script src="./service/tasks/app.js">
+</script>
 
 <style>
 	#app {
@@ -29,5 +36,21 @@
 
 	#nav a.router-link-exact-active {
 		color: #42b983;
+	}
+
+	#menu {
+		width: 70%;
+		margin: 0 auto;
+		display: inline-block;
+		border-bottom: 3px solid #5d5d99;
+	}
+
+	.menu-txt-name {
+		float: left;
+	}
+
+	.menu-txt-logout {
+		float: right;
+		color: #5d5d99;
 	}
 </style>

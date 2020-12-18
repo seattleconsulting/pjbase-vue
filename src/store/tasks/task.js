@@ -5,6 +5,12 @@ import { taskService } from '../../service'
  */
 function initialState() {
 	return {
+		register: null,
+		regError: null,
+		login: null,
+		loginError: null,
+		logout: null,
+		logoutError: null,
 		list: {},
 		listError: null,
 		create: null,
@@ -21,6 +27,12 @@ function initialState() {
  * Getters of task
  */
 const getters = {
+	register: state => state.register,
+	regError: state => state.regError,
+	login: state => state.login,
+	loginError: state => state.loginError,
+	logout: state => state.logout,
+	logoutError: state => state.logoutError,
 	list: state => state.list,
 	listError: state => state.listError,
 	create: state => state.create,
@@ -36,6 +48,42 @@ const getters = {
  * Actions of task
  */
 const actions = {
+	registerUser({ commit }, parameter) {
+		taskService.registerUser(parameter).then(
+			result => {
+				commit('registerSuccess', result.data)
+			},
+			error => {
+				if (error.response) {
+					commit('registerFail', error.response)
+				}
+			}
+		)
+	},
+	loginUser({ commit }, parameter) {
+		taskService.loginUser(parameter).then(
+			result => {
+				commit('loginSuccess', result.data)
+			},
+			error => {
+				if (error.response) {
+					commit('loginFail', error.response)
+				}
+			}
+		)
+	},
+	logoutUser({ commit }) {
+		taskService.logoutUser().then(
+			result => {
+				commit('logoutSuccess', result.data)
+			},
+			error => {
+				if (error.response) {
+					commit('logoutFail', error.response)
+				}
+			}
+		)
+	},
 	getAllTasks({ commit }) {
 		taskService.getAllTasks().then(
 			result => {
@@ -101,6 +149,24 @@ const actions = {
  * Mutations of task
  */
 const mutations = {
+	registerSuccess(state, data) {
+		state.register = data
+	},
+	registerFail(state, error) {
+		state.regError = error
+	},
+	loginSuccess(state, data) {
+		state.login = data
+	},
+	loginFail(state, error) {
+		state.loginError = error
+	},
+	logoutSuccess(state, data) {
+		state.logout = data
+	},
+	logoutFail(state, error) {
+		state.logoutError = error
+	},
 	getAllTaskSuccess(state, data) {
 		state.list = data
 	},

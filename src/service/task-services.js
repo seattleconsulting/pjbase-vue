@@ -5,11 +5,65 @@ import Vue from 'vue'
 Vue.use(AxiosPlugin)
 
 export const taskService = {
+	registerUser,
+	loginUser,
+	logoutUser,
 	getAllTasks,
 	create,
 	getTaskById,
 	edit,
 	remove
+}
+
+/**
+ * ユーザー登録
+ *
+ * @param parameter
+ * @returns 
+*/
+function registerUser(parameter) {
+	const result = Axios({
+		method: 'POST',
+		url: process.env.VUE_APP_ROOT_API + '/api/register',
+		data: {
+			name: parameter.name,
+			email: parameter.email,
+			password: parameter.password,
+			password_confirmation: parameter.password_confirmation
+		}
+	})
+	return result
+}
+
+/**
+ * ユーザーログイン
+ *
+ * @param parameter
+ * @returns 
+*/
+function loginUser(parameter) {
+	const result = Axios({
+		method: 'POST',
+		url: process.env.VUE_APP_ROOT_API + '/api/login',
+		data: {
+			email: parameter.email,
+			password: parameter.password
+		}
+	})
+	return result
+}
+
+/**
+ * ユーザーログアウト
+ *
+ * @returns 
+*/
+function logoutUser() {
+	const result = Axios({
+		method: 'GET',
+		url: process.env.VUE_APP_ROOT_API + '/api/logout'
+	})
+	return result
 }
 
 /**

@@ -15,7 +15,7 @@ export default {
 		},
 		createRes: function(res) {
 			if (res) {
-				this.$router.push('/')
+				this.$router.push('/task')
 			}
 		}
 	},
@@ -25,7 +25,7 @@ export default {
 	methods: {
 		...mapActions('task', ['create']),
 		backBtn() {
-			this.$router.push('/')
+			this.$router.push('/task')
 		},
 		// タスク登録
 		registerTask() {
