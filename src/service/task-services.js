@@ -74,7 +74,7 @@ function logoutUser() {
 function getAllTasks() {
 	const result = Axios({
 		method: 'GET',
-		url: process.env.VUE_APP_ROOT_API + '/api/task/list'
+		url: process.env.VUE_APP_ROOT_API + '/api/tasks'
 	})
 	return result
 }
@@ -88,7 +88,7 @@ function getAllTasks() {
 function create(parameter) {
 	const result = Axios({
 		method: 'POST',
-		url: process.env.VUE_APP_ROOT_API + '/api/task/create',
+		url: process.env.VUE_APP_ROOT_API + '/api/tasks',
 		data: {
 			task_name: parameter.task_name
 		}
@@ -105,7 +105,7 @@ function create(parameter) {
 function getTaskById(parameter) {
 	const result = Axios({
 		method: 'GET',
-		url: process.env.VUE_APP_ROOT_API + '/api/task/getTask/' + parameter.id
+		url: process.env.VUE_APP_ROOT_API + '/api/tasks/' + parameter.id
 	})
 	return result
 }
@@ -118,8 +118,8 @@ function getTaskById(parameter) {
 */
 function edit(parameter) {
 	const result = Axios({
-		method: 'GET',
-		url: process.env.VUE_APP_ROOT_API + '/api/task/edit',
+		method: 'PUT',
+		url: process.env.VUE_APP_ROOT_API + '/api/tasks',
 		params: {
 			id: parameter.id,
 			task_name: parameter.task_name
@@ -136,8 +136,8 @@ function edit(parameter) {
 */
 function remove(parameter) {
 	const result = Axios({
-		method: 'GET',
-		url: process.env.VUE_APP_ROOT_API + '/api/task/delete/' + parameter.id
+		method: 'DELETE',
+		url: process.env.VUE_APP_ROOT_API + '/api/tasks/' + parameter.id
 	})
 	return result
 }
