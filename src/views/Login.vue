@@ -20,7 +20,7 @@
 					<button type="submit" class="btn btn-login" @click="login()">ログイン</button>
 				</div>
 				<div class="form-group">
-					<label class="text-link" @click="register()">新しいアカウントを作成する</label>
+					<label class="text-link"><a href="/register">新しいアカウントを作成する</a></label>
 				</div>
 			</div>
 		</div>

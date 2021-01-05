@@ -30,7 +30,7 @@
 					<button type="submit" class="btn btn-input" @click="register()">登録</button>
 				</div>
 				<div class="form-group">
-					<label class="text-link" @click="gotoLogin()">ログイン画面へ</label>
+					<label class="text-link"><a href="/login">ログイン画面へ</a></label>
 				</div>
 			</div>
 		</div>

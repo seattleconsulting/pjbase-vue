@@ -48,9 +48,6 @@ export default {
 				this.registerUser(this.parameter)
 			}
 		},
-		gotoLogin() {
-			this.$router.push('/login')
-		},
 		// 入力データのチェック
 		checkInput() {
 			var flg = false
